@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Automation test with Python</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effect.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notification.css">
+  </head>
+  <body>
+    <div class="bound">
+      <article>
+          <h1 class="intext"><span style="font-size:27px;line-height:107%;">Automation test with Python</span></h1>
+      </article>
+    </div>
+    <div class="container">
+        <div class="content">
+			      <h3 class="unit"><u>I. Why choose Python?.</u></h3>
+                  <ul class="pinner">
+                    <li>Python is a high-level, general-purpose programming language</li>
+                    <li>Python is designed with the strong advantage of being easy to read, learn and remember, clear structure, convenient for beginners and easy to learn programming language.</li>
+                    <li>No ";" at the end of the command.</li>
+                    <li>-> Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks.</li>
+                  </ul>
+              <p>
+                Some links to learn Python:</a>
+              </p>
+              <ul class="pinner">
+                <li> <a href="https://www.w3schools.com/python/default.asp" class="openLink">w3schools</a>: Python tutorial</li>
+                <li> <a href="https://devdocs.io/python~3.10/" class="openLink">devdocs</a>: Python library</li>
+              </ul>
+		    </div>
+        <div class="content">
+		        <h3 class="unit"><u>II. Install Pycharm IDE.</u></h3>
+                  <ul class="pinner">
+                      <li>Follow this link: <a href="https://www.jetbrains.com/pycharm/" class="openLink">jetbrains</a>.</li>
+                      <li>Croll down to the end of the page, and choose PyCharm Community Edition.</li>
+                  </ul>
+            <div class="value-img">
+              <img src="Data/gif/download.gif" data-action="zoom" data-original="Data/gif/download.gif" alt="journey_start_thumbnail" />
+            </div>
+            <ul class="pinner">
+              <li>Install.</a></li>
+              <li>Click to "Create desktop shorcut"(optional), and "add bin folder to the PATH"(recommended).</li>
+              <li>Reboot.</li>
+            </ul>
+            <div class="value-img">
+              <img src="Data/gif/install.gif" data-action="zoom" data-original="Data/gif/install.gif" alt="journey_start_thumbnail" />
+            </div>
+		    </div>
+        <div class="content">
+		        <h3 class="unit"><u>III. Create a project.</u></h3>
+              <p>Create a new project:</p>
+                  <ul class="pinner">
+                      <li>Open Pycharm.</li>
+                      <li>File -> New project.</li>
+                      <li>Choose project location in the Location field.</li>
+                      <li>Choose "Virtualenv" in enviroinment field.</li>
+                      <li>Uncheck Create a main.py (optional).</li>
+                      <li>Click Create.</li>
+                  </ul>
+                  <div class="value-img">
+                    <img src="Data/gif/createpj.gif" data-action="zoom" data-original="Data/gif/createpj.gif" alt="journey_start_thumbnail" />
+                  </div>
+                  <br>
+              <p>Create a file or folder:</p>
+                <ul class="pinner">
+                  <li>In the Project explorer, right mouse to the project -> New</li>
+                  <ul style="margin-left: 2%;">
+                    <li>Directiory: create a contain folder.</li>
+                    <li>Python file: create a Python script file.</li>
+                  </ul>
+                </ul>
+                <div class="value-img">
+                    <img src="Data/gif/createscr.gif" data-action="zoom" data-original="Data/gif/createscr.gif" alt="journey_start_thumbnail" />
+                </div>
+                <br>
+		    </div>
+        <div class="content">
+		        <h3 class="unit"><u>IV. Selenium framework.</u></h3>
+              <p>Selenium is a free, open-source test automation framework that can help us test an application across different platforms and browsers.</p>
+              <br>
+              <p>To run automation test, we need to install Selenium: </p>
+                <ul class="pinner">
+                  <li>Click on "Python Package" at the bottom.</li>
+                  <li>A tab is appear, type "selenium" to the search field.</li>
+                  <li>Click on selenium and click Install at the right.</li>
+                </ul>
+                <div class="value-img">
+                    <img src="Data/gif/installselenium.gif" data-action="zoom" data-original="Data/gif/installselenium.gif" alt="journey_start_thumbnail" />
+                </div>
+		    </div>
+        <div class="content">
+            <h3 class="unit"><u>V. Extract WebElement attributes.</u></h3>
+                <p>Web page components such as text boxes, checkboxes, buttons, drop-downs, radio buttons, web forms, etc. are called web elements. These can be identified by attributes like id, classname, name, or XPath.</p>
+                <br>
+                <p>To run automation test, we need to locate general locators or XPath.</p>
+                <br>
+                <p class="specialmark">1. Locators in Selenium.</p>
+                <div style="margin-left: 2%;">
+                  <p>Open the Devtool by press F12, use inspect tool to locate the web components which you want to work on it.</p>
+                  <br>
+                  <p>You can see all attributes of web elements like id, classname, name, etc..</p>
+                  <img src="https://www.guru99.com/images/locator1.png" alt="locator example">
+                  <p>Following this link to learn more: <a class="openLink" href="https://selenium-python.readthedocs.io/locating-elements.html">Locators in Selenium</a></p>
+                </div>
+                <br>
+                <p class="specialmark">2. XPath in Selenium.</p>
+                <div style="margin-left: 2%;">
+                  <p>In Selenium automation, if the elements are not found by the general locators like id, class, name, etc. then XPath is used to find an element on the web page.</p>
+                  <br>
+                  <p>You can easy to get a XPath by using inspect tool, then right click to the web components and choose Copy -> Copy Xpath.</p>
+                  <div class="value-img">
+                    <img src="Data/gif/copyxpath.gif" data-action="zoom" data-original="Data/gif/copyxpath.gif" alt="journey_start_thumbnail" />
+                  </div>
+                  <br>
+                  <p>Sometime, attributes of the components can be changed position, so tip above may not stable.</p>
+                  <p>Following this link to learn more: <a class="openLink" href="https://selenium-python.readthedocs.io/locating-elements.html#locating-by-xpath">XPath in Selenium</a></p>
+                  <p><i>Example:</i></p>
+                  <div class="value-img">
+                    <img src="Data/gif/example3.gif" data-action="zoom" data-original="Data/gif/example3.gif" alt="journey_start_thumbnail" />
+                  </div>
+                  <p>Following the example above, we got a xpath:</p>
+                  <p><code style="color: khaki; margin-left: 2%;">//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[2]/div/div[2]/div</code></p>
+                  <p>In this xpath, maybe it contains no id, or many div tags, and position symbols [0], [1],... If in the future, the value we really want to get is swapped with a new value. The value is different, that will lead to an incorrect result.</p>
+                  <p>We can change to:</p>
+                  <p><code style="color: khaki; margin-left: 2%;">//*[@class="oxd-table-cell oxd-padding-cell"]/div[contains(text(),'admin_cc')]</code></p>
+                  <br>
+                  <p>To check a Xpath, using CTRL+F in Devtool or support extentions. If there is only one result, the xpath can be used.</p>
+                  <div class="value-img">
+                    <img src="Data/gif/checkxpath.gif" data-action="zoom" data-original="Data/gif/checkxpath.gif" alt="journey_start_thumbnail" />
+                  </div>
+                  <br>
+                  <p>Some support get Xpath extention: </p>
+                  <ul class="pinner">
+                    <li><a class="openLink" href="https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl">XPath Helper</a></li>
+                    <li><a class="openLink" href="https://selectorshub.com/">SelectorsHub</li>
+                    <li><a class="openLink" href="https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd">Scraper</a></li>
+                    <li><a class="openLink" href="https://www.browserstack.com/guide/chrome-extensions-to-find-xpath-in-selenium">Relative XPath helper</a></li>
+                    <li><a class="openLink" href="https://chrome.google.com/webstore/detail/xpather/gabekepgockchhemajjahpchlnkadiac/">Xpather</a></li>
+                    <li><a class="openLink" href="https://chrome.google.com/webstore/detail/truepath/mgjhkhhbkkldiihlajcnlfchfcmhipmn">TruePath</a></li>
+                  </ul>
+                </div>
+        </div> 
+        <div class="content">
+            <h3 class="unit"><u>VI. Create test script.</u></h3>
+            <p>Automation script created base on testcase, or checklist.</p>
+            <br>
+            <p><i>Sample positive scenarios: </i>Verify if a user will be able to login with a valid username and valid password.</p>
+            <table>
+              <tr>
+                <th>Step</th>
+                <th>Expected Result</th>
+              </tr>
+              <tr>
+                <td><label id="visiblelabel" for="myTextArea" class="myLabel">1. Navigate to <a class="openLink" href="https://www.saucedemo.com/">saucedemo</a></label></td>
+                <td>Verify that website can reach</td>
+              </tr>
+              <tr>
+                <td><label for="myTextArea" class="myLabel">2. Type valid username to the username textbox</label></td>
+                <td>Verify that able to type username</td>
+              </tr>
+              <tr>
+                <td><label for="myTextArea" class="myLabel">3. Type valid password to the password textbox</label></td>
+                <td>Verify that able to type password</td>
+              <tr>
+                <td><label for="myTextArea" class="myLabel">4. Click on Login buttom</label></td>
+                <td><label for="myTextArea" class="myLabel">Verify that able to click and automatically navigate to next site</label></td>
+              </tr>
+            </table>
+            <textarea name="scriptgenerate" id="myTextArea" cols="200" rows="25" readonly>
+from selenium import webdriver              #import webdriver library
+from selenium.webdriver.common.by import By #import By to extract attributes
+
+# initialize browser variable
+driver = webdriver.Edge()
+            </textarea>
+            <button onclick="copyToClipboard('myTextArea')">copy</button>
+        </div>
+        <br>
+        <div class="content">
+          <p><i>Sample negative scenarios: </i>Verify if a user will be able to login with a valid username and valid password.</p>
+          <table>
+            <tr>
+              <th>Step</th>
+              <th>Expected Result</th>
+            </tr>
+            <tr>
+              <td><label id="visiblelabel1" for="myTextArea1" class="myLabel1">1. Navigate to <a class="openLink" href="https://www.saucedemo.com/">saucedemo</a></label></td>
+              <td>Verify that website can reach</td>
+            </tr>
+            <tr>
+              <td><label for="myTextArea1" class="myLabel1">2. Type <i>invalid</i> username to the username textbox</label></td>
+              <td>Verify that able to type username</td>
+            </tr>
+            <tr>
+              <td><label for="myTextArea1" class="myLabel1">3. Type valid password to the password textbox</label></td>
+              <td>Verify that able to type password</td>
+            <tr>
+              <td><label for="myTextArea1" class="myLabel1">4. Click on Login buttom</label></td>
+              <td><label for="myTextArea1" class="myLabel1">Verify that able to click, a error lable will be displayed, <br>and still stay in curent page.</label></td>
+            </tr>
+          </table>
+          <textarea name="scriptgenerate" id="myTextArea1" cols="20" rows="25" readonly>
+from selenium import webdriver              #import webdriver library
+from selenium.webdriver.common.by import By #import By to extract attributes
+
+# initialize browser variable
+driver = webdriver.Edge()
+
+# create xpath variable
+txt_username = driver.find_element(By.ID, "user-name")
+txt_password = driver.find_element(By.XPATH, "//*[@id='password']")
+btn_login = driver.find_element(By.ID, "login-button")
+          </textarea>
+          <br>
+          <p><i>Also, instead of using "assert", we can use "if... else..." block to be able to handle errors, and "raise" to throw the expected exceptions.</i></p>
+          <pre>
+            <code>
+if <i style="color: rgb(254, 167, 45);">expression</i>:
+  raise <i style="color: rgb(254, 167, 45);">Exception("error...")</i></code>
+          </pre>
+          <p>For more, follow this link: <a class="openLink" href="https://www.w3schools.com/python/ref_keyword_raise.asp">keyword raise</a></p>
+          <br>
+          <br>
+          <p>Demo websites to practice Selenium WebDriver Online:</p>
+          <ul class="pinner">
+            <li> <a class="openLink" href="https://www.saucedemo.com/">Sauce Demo Site for Testing</a></li>
+            <li> <a class="openLink" href="https://the-internet.herokuapp.com/">The Internet Heroku App</a></li>
+            <li> <a class="openLink" href="https://opensource-demo.orangehrmlive.com/">OrangeHRM Demo Site for Practice</a></li>
+            <li> <a class="openLink" href="https://only-testing-blog.blogspot.com/">OnlyTesting Blog Demo Website</a></li>
+            <li> <a class="openLink" href="https://testpages.herokuapp.com/styled/index.html">TestPages Heroku App Demo Site</a></li>
+            <li> <a class="openLink" href="https://jqueryui.com/">jQuery UI Demo Website for Selenium WebDriver Testing</a></li>
+            <li> <a class="openLink" href="https://omayo.blogspot.com/">Omayo Blog for Online Testing</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <h3 class="unit"><u>VII. Handle testcase and exceptions error.</u></h3>
+          <p class="specialmark">1. Module fuction to contain a testcase.</p>
+          <div style="margin-left: 2%;">
+            <p>In Python a function is defined using the def keyword:</p>
+            <pre>
+              <code>
+  def my_function():
+      print("Hello from a function")</code>
+            </pre>
+            <p>To call a function, use the function name followed by parenthesis:</p>
+            <pre>
+              <code>
+  def my_function():
+      print("Hello from a function")
+
+  <b>my_function()</b></code>
+            </pre>
+            <br>
+            <p>For more, follow this link: <a class="openLink" href="https://www.w3schools.com/python/python_functions.asp">python functions</a></p>
+            <br>
+          </div>
+          <p class="specialmark">2. Exception Handling.</p>
+          <div style="margin-left: 2%;">
+            <p>When an error occurs, or exception as we call it, Python will normally stop and generate an error message.</p>
+            <p>These exceptions can be handled using the try statement:</p>
+            <pre>
+              <code>
+  def my_function():
+      try:
+        # code block
+        # ...
+      
+      # handle all exception
+      except Exception as e:
+        print(str(e))
+        return e
+      
+      # handle AssertionError exception
+      except AssertionError as e:
+        return e
+
+      # handle WebDriverException exception
+      except WebDriverException as e:
+        return e
+
+      ...</code>
+            </pre>
+          <p>In the example above, we can use multiple 'except' to handle and customize the result</p>
+          <br>
+          <p>Exceptions that are usually raised in Python:</p>
+          <ul class="pinner">
+            <li><a class="openLink" href="https://www.w3schools.com/python/python_ref_exceptions.asp">Python Built-in Exceptions</a></li>
+            <li><a class="openLink" href="https://selenium-python.readthedocs.io/api.html#module-selenium.common.exceptions">Python - Selenium exceptions</a></li>
+            <li><a class="openLink" href="https://www.selenium.dev/selenium/docs/api/py/common/selenium.common.exceptions.html">selenium.common.exceptions</a></li>
+          </ul>
+          <p>NOTE: The exception classes can be imported like this (Replace the TheNameOfTheExceptionClass with the actual class name given below):</p>
+          <p style="background-color: dimgray; border-radius: 5px; text-align: center; display: inline-block; padding: 3px;"><font color="A8DF8E">from </font><font color="191D88">selenium.common.exceptions </font><font color="A8DF8E">import </font> [TheNameOfTheExceptionClass]</p>
+        </div>
+        </div>
+        <div class="content">
+          <h3 class="unit"><u>VIII. Export report.</u></h3>
+          <p>There are many ways to export reports such as writing csv, excel, html files,... In this tutorial, we will guide you on how to process on excel files.</p>
+          <p>First, install <i>openpyxl</i> library.</p>
+          <br>
+          <br>
+          <ol class="pinner" type="1">
+            <li><label id="visiblelabel2" for="myTextArea2" class="myLabel2">Import library.</label></li>
+            <li><label for="myTextArea2" class="myLabel2">Create a new excel file.</label></li>
+            <li><label for="myTextArea2" class="myLabel2">Select sheet.</label></li>
+            <li><label for="myTextArea2" class="myLabel2">Write title to the file.</label></li>
+            <li><label for="myTextArea2" class="myLabel2">Customize the results.</label></li>
+            <li><label for="myTextArea2" class="myLabel2">Save file.</label></li>
+          </ol>
+          <textarea name="scriptgenerate" id="myTextArea2" cols="20" rows="25" readonly>
+          </textarea>
+        </div>
+        <div class="content">Box 9</div>
+        <div class="content">Box 10</div>
+        <div class="content">Box 11</div>
+        <div class="content">Box 12</div>
+        <div class="content">Box 13</div>
+        <div class="content">Box 14</div>
+        <div class="content">Box 15</div>
+        <div class="content">Box 16</div>
+      
+      <a id="loadMore" href="#" class="button button--piyo" style="margin-top:  5%;">
+        <div class="button__wrapper">
+            <span class="button__text">MORE</span>
+        </div>
+        <div class="characterBox">
+            <div class="character wakeup">
+                <div class="character__face"></div>
+            </div>
+            <div class="character wakeup">
+                <div class="character__face"></div>
+            </div>
+            <div class="character">
+                <div class="character__face"></div>
+            </div>
+        </div>
+      </a>
+    </div>
+    <!-- <div id="notice"></div> -->
+    <div id="toast">
+      <div id="timg">Icon</div>
+      <div id="desc">Code has been copied to the clipboard.</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/generate.js"></script>
+    <script src="js/link.js"></script>
+  </body>
+</html>
