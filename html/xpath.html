@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>XPath</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effect.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notification.css">
+  </head>
+  <body>
+    <div class="bound">
+      <article>
+          <h1 class="intext"><span style="font-size:27px;line-height:107%;">Automation test with Python</span></h1>
+      </article>
+    </div>
+    <div>
+      <p>Locators AKA XPath in Selenium test automation, help to find the unique DOM elements. There are different types of locators CSS, ID, Class, XPath, etc. The XPath Locator is the most commonly used in test automation.</p>
+
+      <h3 class="unit" id="what-is-xpath"><span id="What_is_Xpath"><strong>What is Xpath?</strong></span></h3 class="unit">
+
+      <p>XML Path Language is popularly abbreviated as XPath; it locates the element uniquely in the DOM tree. In <a href="https://testsigma.com/blog/selenium-4-automation-engineer-expect/" target="_blank" rel="noreferrer noopener">test automation</a>, Locators and Selectors are used interchangeably.</p>
+
+      <h3 class="unit" id="what-is-xpath-in-selenium"><span id="What_is_Xpath_in_Selenium"><strong>What is Xpath in Selenium?</strong></span></h3 class="unit">
+
+      <p>XPath is a syntax used to navigate and select elements in an XML document in Selenium. It is a powerful tool for web automation, allowing testers to write expressions that locate specific elements on a web page and interact with them using Selenium’s API.</p>
+
+      <h3 class="unit" id="h-basic-xpath-syntax"><span id="Basic_Xpath_Syntax"><strong>Basic Xpath Syntax </strong></span></h3 class="unit">
+
+      <p>//tag_name[@attribute=’value’]</p>
+
+      <p><strong>//</strong> : Stands current node</p>
+
+      <p><strong>tag_name</strong> : HTML tag name example input, div, span etc.</p>
+
+      <p><strong>@attribute</strong>: Name of the attribute class, id, aria-label etc.</p>
+
+      <p><strong>value</strong>: value of the attribute</p>
+
+      <h3 class="unit" id="h-how-to-construct-xpath-using-chrome-browser-devtools-window"><span id="How_to_Construct_XPath_Using_Chrome_Browser_DevTools_Window"><strong>How to Construct XPath Using Chrome Browser DevTools Window?</strong></span></h3 class="unit">
+
+      <p>Xpath can be constructed using any modern browser. As Chrome is the most used browser, the demonstration is given in Chrome. Steps remain mostly the same for other browsers as well.</p>
+
+      <p>1. Open the web page.</p>
+
+      <p>2. Use Shortcut CTRL+SHIFT+I for Windows Or CMD+SHIFT+C for Mac.</p>
+
+      <p>3. The Developer window with the active Elements tab opens up.</p>
+
+      <p>4. Click on Element Selector, and select the Element.</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh5.googleusercontent.com/8r2yEU9HJocgAFsZvHMzw5RnvTT5cBEmBApXSCXjv_eEh8fPxPmArFktQtSAEG-z6hCVsKkweOeGimr-uXhaJqD8G78ihSZ8Q1q-9sC8ixyjk4tekwQciLaey0hflie4Wzuqd3Fbr_UGGH1ZqOo8xg" alt=" Element Selector" width="600" height="400"></figure></div>
+
+      <p>5. Copy Xpath</p>
+
+      <p>Right Click on the DOM Tree-specific element Click on Copy then Click on Copy Xpath</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/ii1QJVmgpGd8AiGHREEW1v-ioMLPzbPskYWeB6qvTIcn1u9zsyZsciaETl2pO8AcOK7SN0hGNs2bmxLhXI1OUx4omgpEmS3bj_K6P08aOci5Q7GIBUm6W8gchGS3KuCrmc3ECWPnDyXwOXfFryb2Rw" alt=" Copy Xpath" width="600" height="400"></figure></div>
+
+      <p>6. Verify Xpath, In the Elements Tab open search using CTRL + F (Windows) or CMD + F (Mac), and paste the copied Xpath, if the Xpath is correct,&nbsp; the element should highlight.</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh3.googleusercontent.com/vN_A6EN1ogNhAgl3hfRgiB9BHJvsN27ddh66YvnVJKLb4PVpoTf6OSxQRz2lvqLbhDQY1TzmXR5EYub3EQTXPWliAbcpaUlWr4zag4X1PXRiFNkmnD4pgtA1cwPAze0mVX7XznFjvofmNS5duiGnbw" alt=" Verify Xpath" width="600" height="400"></figure></div>
+
+      <p>Chrome uses its way to construct the Xpath, sometimes the copied Xpath will be long, So it is not recommended to use the Copy Xpath, This way of copying Xpath is helpful for beginners until they are comfortable with constructing one on their own. In this article, you learn the best way to construct the XPath with <a href="https://testsigma.com/blog/xpath-locators-cheat-sheet/" target="_blank" rel="noreferrer noopener">XPath Locator</a> strategies and keywords.</p>
+
+      <h3 class="unit" id="h-types-of-xpath"><span id="Types_of_Xpath"><strong>Types of Xpath</strong></span></h3 class="unit">
+
+      <p>Xpath can be broadly classified into</p>
+
+      <p>1. Absolute Xpath</p>
+
+      <p>2. Relative Xpath</p>
+
+      <h3 id="h-what-is-absolute-xpath"><span id="What_is_Absolute_Xpathnbsp"><strong>What is Absolute Xpath?&nbsp;</strong></span></h3>
+
+      <p>The absolute Xpath is often referred to as Full Xpath, which starts from the beginning of the HTML document (root). The absolute with Xpath starts with a single slash (/).</p>
+
+      <p><strong>Example of Absolute Xpath</strong></p>
+
+      <pre class="wp-block-code"><code>/html/body/div[4]/div[2]/form/div[1]/div[1]/div[2]/div/div[2]/input</code></pre>
+
+      <h3 id="h-why-absolute-xpath-is-not-recommended-for-selenium-test-automation"><span id="Why_Absolute_Xpath_is_Not_Recommended_for_Selenium_Test_Automation"><strong>Why Absolute Xpath is Not Recommended for Selenium Test Automation?</strong></span></h3>
+
+      <p>Absolute XPath is not recommended for any test automation the reason is the absolute XPath starts from the root of the DOM Structure/Tree document. If there are any elements added as a child in between the path due to application improvement or feature delivery your test automation code breaks. So in test automation typically the relative Xpath locator is the best way to use it.</p>
+
+      <h3 id="h-what-is-relative-xpath"><span id="What_is_Relative_Xpath"><strong>What is Relative Xpath?</strong></span></h3>
+
+      <p>Unlike Absolute Xpath, the relative XPath starts from the middle of the DOM Tree and it starts with double slashes (//). Since the Relative Xpath contains less top-level HTML Element node dependency it is more stable and typically used in test automation.</p>
+
+      <p><strong>Example of Relative Xpath</strong></p>
+
+      <pre class="wp-block-code"><code>//a[@href="/pricing"]</code></pre>
+
+      <h3 class="unit" id="h-how-to-create-dynamic-xpath-in-selenium"><span id="How_to_Create_Dynamic_XPath_in_Selenium"><strong>How to Create Dynamic XPath in Selenium</strong>?</span></h3 class="unit">
+
+      <p>XPath provides many keywords and methods which help to write XPath for any complicated scenarios, Some times you may not be able to construct Selectors using CSS selectors but you can achieve it through XPath.</p>
+
+      <p>As mentioned above the typical Xpath Syntax in Selenium as follows</p>
+
+      <p>//tagname[@attribute=’value’]</p>
+
+      <p><strong>Example:&nbsp;</strong></p>
+
+      <pre class="wp-block-code"><code>//a[@href="/pricing"]</code></pre>
+
+      <h3 class="unit" id="h-how-to-write-xpath-for-different-types-of-html-tags-and-attributes"><span id="How_to_Write_XPath_for_Different_Types_of_HTML_Tags_and_Attributes"><strong>How to Write XPath for Different Types of HTML Tags and Attributes?</strong></span></h3 class="unit">
+
+      <p>XPath can be written for any type of element such as img, div, span, a, input, etc attributes such as id, class, value, href, src. In simple any HTML tag or any HTML attribute that is rendered as part of the DOM tree is eligible for Xpath.</p>
+
+      <p> style=”padding-top: 10px”&gt;Below are some Basic Examples of XPath with different attributes and tag name</p>
+
+      <p><strong>XPath for id attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//*[@id='btnK']</code></pre>
+
+      <p><strong>XPath for button element class value</strong></p>
+
+      <pre class="wp-block-code"><code>//button[@class='search']</code></pre>
+
+      <p><strong>XPath for Image with src attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//img[@src='/images/logo.png']</code></pre>
+
+      <p>As shown above you can construct XPath for the Combination of Tagname and attribute value.</p>
+
+      <h3 class="unit" id="h-how-to-write-xpath-contains-function-in-selenium-web-driver"><span id="How_to_Write_XPath_Contains_Function_in_Selenium_Web_Driver"><strong>How to Write XPath Contains() Function in Selenium Web Driver?</strong></span></h3 class="unit">
+
+      <p>Contains() method in Selenium XPath is typically used when the value of an Element or attribute changes dynamically.&nbsp;Lets know how to use Contains() for Xpath in Selenium.</p>
+
+      <h3 class="unit" id="h-using-contains-in-xpath-for-class-attribute"><span id="Using_Contains_in_Xpath_for_Class_Attribute"><strong>Using Contains() in Xpath for Class Attribute</strong></span></h3 class="unit">
+
+      <p>Consider an example, you have HTML code like below</p>
+
+      <pre class="wp-block-code"><code>&lt;button type="button" class="getting started mbg blueocean"&gt;getting started&lt;/button&gt;</code></pre>
+
+      <p>In the above code, the class name is getting started mbg blueocean, and the mbg word is dynamic and it changes each time you load the page, the static text is getting started so you need to use contains for the class attribute you can use it like below.</p>
+
+      <pre class="wp-block-code"><code>//button[contains(@class,'getting started')]</code></pre>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/vAGXSsxJTCfHu70EO1J9L-lU2fDov27fY-M_XfN48dH-k2-hkYp7geAQDWGO5xw9meF1k7nd5rl9jISmusLDbzZtzuANQ4U-We4G_uT7vYjV2_bQ_xpuNYR8dxClzbLt32PLsWYK175elGh5GpRmeQ" alt=" Xpath for class attribute" width="600" height="400"></figure></div>
+
+      <h3 class="unit" id="xpath-contains-functions-for-attributes"><span id="XPath_Contains_Functions_for_Attributes"><strong>XPath Contains Functions for Attributes.</strong></span></h3>
+
+      <p>The above example demonstrates the usage of contains for class, Just like the class you can use any attribute inside the contains.</p>
+
+      <p>Syntax:</p>
+
+      <p>//tagName[contains(@attribute_name,’partial_value’)]</p>
+
+      <p>Note: instead of tag name you can use star (*) which matches all the tags.</p>
+
+      <p id="h-example-usage-contains-in-xpath-for-different-attributes"><strong>Example Usage of Contains() for Xpath in Selenium for Different Attributes</strong> </p>
+
+      <p><strong>XPath contains a function for the id attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//*[contains(@id,'some_id')]</code></pre>
+
+      <p><strong>XPath contains a function for the name attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//*[contains(@name,'some_name')]</code></pre>
+
+      <p><strong>XPath contains function for href attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//a[contains(@href,'some/link.html')]</code></pre>
+
+      <p><strong>XPath contains function for image src attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//img[contains(@src,'some/path/logo.png')]</code></pre>
+
+      <p><strong>XPath contains function for name attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//div[contains(@name,'some_name')]</code></pre>
+
+      <p><strong>XPath contains a function for the type attribute</strong></p>
+
+      <pre class="wp-block-code"><code>//button[contains(@type,'sub')]</code></pre>
+
+      <h3 class="unit" id="h-xpath-matching-text-elements"><span id="XPath_Matching_Text_Elements"><strong>XPath Matching Text Elements</strong></span></h3 class="unit">
+
+      <p>The XPath provides a text() function for manipulation of text in Xpath, using the text() function you can match the Exact text or Partial text in XPath.</p>
+
+      <h3 class="unit" id="h-how-to-match-exact-text-in-xpath"><span id="How_to_Match_Exact_Text_in_XPath"><strong>How to Match Exact Text in XPath</strong>?</span></h3 class="unit">
+
+      <p>Sometimes, there will not be any unique attributes for some HTML tags, only the text attached to that element is unique. In such cases, you choose to use text() in XPath.</p>
+
+      <p>Take an example of the Invitation page</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh3.googleusercontent.com/okwvfnCR6QVA-xlVzN0L5KuQcdIrhXZlm9y4A6pP-Cafbq4DYGUwM-AZAUAyj25zq9uah1OUnpvy3mGgJCptxKOU4JZY4cBda1Ynoo8q4CcU0aUY11l2LY7-xIW0ItYisqPIs7wzKJB5OqU80SumqQ" alt="Match Exact Text in XPath" width="600" height="400"></figure></div>
+
+      <p>There is no unique attribute available, however, there is a text Continue which is unique.</p>
+
+      <h3 class="unit" id="h-syntax-for-matching-exact-text-in-xpath-selenium"><span id="Syntax_for_Matching_Exact_Text_in_Xpath_Selenium"><strong>Syntax for Matching Exact Text in Xpath Selenium</strong></span></h3>
+
+      <p>//tagName[text() =’text_value’]</p>
+
+      <p>For the above scenario, you can write Xpath to match the exact text below</p>
+
+      <pre class="wp-block-code"><code>//button/div[text()='Continue']</code></pre>
+
+      <h3 class="unit" id="h-partial-match-of-text-content-in-xpath"><span id="Partial_Match_of_Text_Content_in_Xpath"><strong>Partial Match of Text Content in Xpath</strong></span></h3 class="unit">
+
+      <p>Let’s have a profile page where there is a greeting message, like&nbsp; ” Hi David! Welcome to Testsigma”, here only David the Firstname changes from one account to another the Welcome to Testsigma is static for all users. So when you locate the element you need to match the text only welcome to Testsigma part.</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh3.googleusercontent.com/p43LAdA1NwhezAvTDh7C3SR9Gb5HJge7_A0_7fx72W8zl1TiQBDm6VZk0ZKQ-u80nYo23nOLHsBMJU7fJrpbtka5bI09oBDxcdB37xUWz1Rz3tan079NmVZkQi5RxK39nVClmNPF3M8l4Xt_21pEPg" alt="Partial Match of Text Content in Xpath" width="600" height="400"></figure></div>
+
+      <h3 id="syntax-for-partial-matching-text-in-xpath"><span id="Syntax_for_Partial_Matching_Text_in_XPath"><strong>Syntax for Partial Matching Text in XPath</strong></span></h3>
+
+      <p>//tagName[contains(text(),’partial_text’)]</p>
+
+      <p>Based on the above syntax for the given scenario, you can write the XPath like below</p>
+
+      <pre class="wp-block-code"><code>//p[contains(text(),'Welcome to testsigma')]</code></pre>
+
+      <h3 class="unit" id="h-using-conditions-in-xpath"><span id="Using_Conditions_in_XPath"><strong>Using Conditions in XPath</strong></span></h3 class="unit">
+
+      <p>XPath allows you to use the conditions such as AND, and OR. Sometimes you might want either of the attribute value should be present for example you have HTML code</p>
+
+      <pre class="wp-block-code"><code>&lt;input name="q" type="text" title="Search"&gt;</code></pre>
+
+      <h3 id="or-condition-in-xpath"><span id="OR_Condition_in_Xpath"><strong>OR Condition in Xpath</strong></span></h3>
+
+      <p>You might want to match either the name attribute or title attribute should match, in that case, you can use OR</p>
+
+      <pre class="wp-block-code"><code>//input[@title='Search' or @name='q']</code></pre>
+
+      <p>The above Xpath expression matches either title or name if anyone is true then it matches that DOM element.</p>
+
+      <p>First, it searches for an input element with attribute title=’Search’ if it finds true then returns that element, if it doesn’t find any then it goes to the next condition which is @name=’q’ if it finds any element then returns the corresponding element if there is no match for the second element then returns no element. In short, any one or both of the conditions should be true.</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/dGBlJ4N3oonKsdtQipgAH1Slz3-M-m9yR3ZzbpbBnsr3yXO-akQQ1NS8mZz_8f1Wi1ukDReugABpDVfVaICbK8tLa3x7leILK0FhsJMMn7sh92gEA9SaeDGWNwvwH-XagRimPxoRuLqnPCo5Baii3w" alt="Conditions in XPath" width="600" height="400"></figure></div>
+
+      <h3 id="and-condition-in-xpath"><span id="AND_Condition_in_XPath"><strong>AND Condition in XPath</strong></span></h3>
+
+      <p>If you require to match both conditions, then you need to use <strong>AND.</strong></p>
+
+      <p>Considering the example above, if you want to match both title and name, instead of or you can put and like below</p>
+
+      <pre class="wp-block-code"><code>//input[@title='Search' and @name='q']</code></pre>
+
+      <p>First, it matches the title if there is no element found (if it is false) then it returns no matching element found, if the first condition is true then evaluate the second condition if it is false then returns no matching element if it is true then it returns the corresponding element. In short, Both conditions should be true.</p>
+
+      <p>Consider an example where the value changes dynamically, but the first part of the id is always constant like in the below image.</p>
+
+      <h3 class="unit" id="h-starts-with-in-xpath"><span id="Starts-With_in_Xpath"><strong>Starts-With in Xpath</strong></span></h3 class="unit">
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/GDGjH9GE0h-LMwHRGfwm6KyclW9h9s9DanxZbtIq7T1LJ4YfhRqhSLnUrUJiQY91q0JAAmfOO6zAhraeg-qMiYZwH95TA-Sd6BVA9r6u9uDFiTNFKQn0D6l1As975Gr4x9goW_g_3lDYOY-UoEcggQ" alt="Starts-With in Xpath" width="600" height="300"></figure></div>
+
+      <p>In the above use case, you can use the starts-with functionality of XPath</p>
+
+      <h3 id="xpath-starts-with-syntax"><span id="XPath_Starts-with_Syntax"><strong>XPath Starts-with Syntax:</strong></span></h3>
+
+      <p>//tagName[starts-with(@attribute,’start-value’)]</p>
+
+      <p>Using the syntax you can construct xpath for the above scenario</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//input[starts-with(@id,'searchbox')]</code></pre>
+
+      <p><strong>Note:&nbsp;</strong></p>
+
+      <p>i. The XPath 2.0 onwards both starts-with and ends-with are supported.</p>
+
+      <p>ii. The Xpath ends-with can be used the same way as starts-with, the ends-with useful if the initial value changes and the end value remains constant</p>
+
+      <p>iii. Example of ends with //input[ends-with(@id,’end-value’)]</p>
+
+      <h3 class="unit" id="h-xpath-axes"><span id="XPath_Axes"><strong>XPath Axes</strong></span></h3 class="unit">
+
+      <p>XPath Axes are helps to identify the elements with relationships such as a parent, child, sibling, etc. XPath Axes refer to the axis on which elements are lying relative to an element</p>
+
+      <h3 id="list-of-xpath-axes-methods"><span id="List_of_XPath_Axes_methods"><strong>List of XPath Axes methods</strong></span></h3>
+
+      <ul><li>ancestor</li><li>ancestor-or-self</li><li>attribute</li><li>child</li><li>descendant</li><li>descendant-or-self</li><li>following</li><li>following-sibling</li><li>namespace</li><li>parent</li><li>preceding</li><li>preceding-sibling</li><li>self</li></ul>
+
+      <p><strong>Xpath Following Axis</strong></p>
+
+      <p>Selects everything in the DOM Tree after the closing tag of the current node</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//following:: tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>input[@name="btnI"]//following::input</code></pre>
+
+      <p><strong>Xpath Ancestor Axis</strong></p>
+
+      <p>The Ancestor Axis Matches all the ancestors (parent, grandparent, etc.) of the current node.</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//ancestor:: tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code> //input[@value="Google Search"]//ancestor::div</code></pre>
+
+      <p><strong>Child Axis in Xpath</strong></p>
+
+      <p>The Child Axis in Xpath matches all the children of the current node</p>
+
+      <p><strong>Syntax:&nbsp;</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//child:: tag_name</p>
+
+      <p><strong>Example:&nbsp;</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//child::li</code></pre>
+
+      <p><strong>Preceding Axis in Xpath</strong></p>
+
+      <p>Matches all nodes that appear before the current node in the HTML Document, except ancestors, attributes, and namespace</p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//preceding:: tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//preceding::div</code></pre>
+
+      <p><strong>Following-sibling Axis in Xpath</strong></p>
+
+      <p>The Following sibling&nbsp; selects all siblings in HTML Document after the current node</p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//following-sibling::tag_name</p>
+
+      <p><strong>Example:&nbsp;</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//following-sibling::ul</code></pre>
+
+      <p><strong>Parent Axis in Xpath</strong></p>
+
+      <p>Selects the parent of the current node in HTML Documents</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//parent::tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//parent::div</code></pre>
+
+      <p><strong>Self Axis in Xpath</strong></p>
+
+      <p>The Self Axis is rarely used in writing Xpath, this is used for selecting the current node</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//self::tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//self::ul</code></pre>
+
+      <p><strong>Descendant Axis in Xpath</strong></p>
+
+      <p>Selects all descendants including children, grandchildren, etc.&nbsp; of the current node in HTML Document</p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//descendant::tag_name</p>
+
+      <p>//ul[@id=’list1′]//descendant::div</p>
+
+      <p><strong>Preceding Sibling Axis in Xpath</strong></p>
+
+      <p>The preceding sibling used for selecting the all siblings before the current node</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//preceding-sibling::tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//preceding-sibling::div</code></pre>
+
+      <p><strong>Descendant-Or-Self Axis in Xpath</strong></p>
+
+      <p>The descendant-or-self is used for selecting all descendants including children, grandchildren, etc. of the current node and the current node itself.</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//descendant-or-self::tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//ul[@id='list1']//descendant-or-self::ul</code></pre>
+
+      <p><strong>Ancestor-or-self Axis in XPath</strong></p>
+
+      <p>Ancestor or self is used to identify the context node and the ancestor element from the context node.</p>
+
+      <p><strong>Syntax:</strong></p>
+
+      <p>//tag_name[@attribute_name=’attribute_value’]//ancestor-or-self::tag_name</p>
+
+      <p><strong>Example:</strong></p>
+
+      <pre class="wp-block-code"><code>//div[@class='car']/ancestor-or-self::div</code></pre>
+
+      <p><strong>Attribute Axis in Xpath</strong></p>
+
+      <p>The attribute axis in Xpath selects all attributes of the current node</p>
+
+      <p><strong>Example</strong></p>
+
+      <pre class="wp-block-code"><code>//input[attribute::name = 'btnK']</code></pre>
+
+      <p><strong>Note:</strong></p>
+
+      <p>1. Whenever there is more than one match you can always use an index like [1] [2] [3] etc. This selects 1<sup>st</sup> 2<sup>nd</sup> and 3<sup>rd</sup> elements respectively.</p>
+
+      <p>2. / and //are most used in Xpath, you can use / and // at the start or in the middle</p>
+
+      <p>3. / matches root node, if you double slash (//) is used in the middle of any tag, it defines a descendant relationship</p>
+
+      <p>4. Xpath is recommended to use when there is no other way of selecting an element. For example, if the id is available then the id takes priority over the XPath</p>
+
+      <p>5. A single dot (.) is used to select the current node</p>
+
+      <p>6. A double dot (..) is used to select the parent. For example, if you want to get the parent of the body tag you can simply use //body/.</p>
+
+      <p>The Automation framework or test script requires coding knowledge, most of the time beginners find difficulties in understating the automation framework and working on the test script. Testsigma provides <a href="https://testsigma.com/blog/scriptless-test-automation-solution-how-to-use-it-to-improve-your-testing-roi/" target="_blank" rel="noreferrer noopener">codeless automation</a>. You do not need a single line of code. Testsigma also has a dedicated chrome recorder plugin, you can simply install it on google chrome and start automating.</p>
+
+      <h3 class="unit" id="h-how-to-write-codeless-automation-scripts-using-testsigma"><span id="How_to_Write_Codeless_Automation_Scripts_Using_Testsigma"><strong>How to Write Codeless Automation Scripts Using <a href="https://testsigma.com/" target="_blank" rel="noreferrer noopener">Testsigma</a></strong></span></h3 class="unit">
+
+      <p>1. Download and install the Testsigma Recorder plugin for Chrome</p>
+
+      <p>2. Login to Testsigma with Credentials ( If you don’t have an account create one)</p>
+
+      <p>3. Create a New Project&nbsp; by providing the Project Name</p>
+
+      <p>4. Click on Create new Testcase</p>
+
+      <p>5. Enter the Testcase Name and Base URL</p>
+
+      <p>6. Click on record Test</p>
+
+      <p>7. A New Browser window opens up and recording starts</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/1bsHjSyCGGPdK6OVCHWq4HPI8hBYnuPjEUCN5s0oSdGmUjcYYlHrwKV6mmzpZbG3IvJeT8TbUuDVppLT3U1xbWcSpd3gh_JjtvCXHwWIzsHoYlRPmkLLJsw1j_ynw1eUn_ocWMxLV4HIVO1XMRxULA" alt="recording in testsigma" width="600" height="400"></figure></div>
+
+      <p>8. Perform a set of actions as per your <a href="https://testsigma.com/blog/test-case-vs-test-scenario/" target="_blank" rel="noreferrer noopener">test case</a>, once done click on finish</p>
+
+      <p>9. You will be landed on Testsigma Project Dashboard and all the recorded steps will be shown.</p>
+
+      <p>10. Click on Start to Run the Testsigma Automated Testcases</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh6.googleusercontent.com/nvox0fUNodBd87tdLhGaSV1X11HpAIosDKTQrvOK2zlcTR6ovd2mvO0SD4MrNoj2EaWhxUTBoIGQnAns-YCc4Yv4srsuSkYuphCiIx2BpvfOGVjrPuyI5JDHqNpzI7GmvlQ65dM4rJSyFsnwsJOUGQ" alt="Run the Testsigma Automated Testcases" width="600" height="400"></figure></div>
+
+      <p>11. You will be asked for Configurations, Choose the configuration from the drop-down list</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/Q-OC82cwQSyrtpC2SOSpsHyYO1TT8GAMzEafWUPiCaXzYOD4vU855xjzDx1bmJl5rqM41lNEBq8uXX40yQz_LleEIN_hbaWVFAFAxq6V4U_XysagDJ4XmVC1y6ywW1LWMmvQZTKP064Qokgg0rJftQ" alt="testsigma configuration" width="600" height="400"></figure></div>
+
+      <p>12. Click on Run now, Wait until it finishes</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/jXf2I25su4kQ3R5OOIVcrKq5JjVOKoNEkK6Al_aTK3yhxN4p8kKd3oq86Piufn3FovfNJd_h5RvL_0GyPpxLkfxxaa54_rtEnSXMAp7G_0_H0HG9n-FodgxT6YNv7PB1PooP-EbUwSkBBsv-MoMFAg" alt="Run test" width="600" height="400"></figure></div>
+
+      <p>13. If the <a href="https://testsigma.com/blog/why-do-selenium-tests-fail-top-reasons-testsigma/" target="_blank" rel="noreferrer noopener">test fails</a>, you can even edit selectors</p>
+
+      <div class="wp-block-image"><figure class="aligncenter is-resized"><img loading="lazy" src="https://lh4.googleusercontent.com/MYFup2wJpCQoh8ujOIGJy0GWLCvM1MZMh9tT9xePCZwLhvxb5qbWqKcJZ3TGSdmC6aUrRSe18EMu28qt4O0LkmClw93l7eGQRDTzwWaPEDx4bvO-5eDwsntvlUwrP97MGIBU1LdJYxbn4XaXV9h4kA" alt="edit selectors" width="600" height="400"></figure></div>
+
+      <h3 class="unit" id="frequently-asked-questions"><span id="Frequently_Asked_Questions"><strong>Frequently Asked Questions</strong></span></h3 class="unit">
+
+      <h3 id="what-are-the-different-ways-to-find-xpath-in-selenium"><span id="What_are_the_different_ways_to_find_XPath_in_Selenium">What are the different ways to find XPath in Selenium?</span></h3>
+
+      <p>There are several ways to locate XPath in Selenium:</p>
+
+      <ul><li>Developer Tools for Browsers</li><li>Firefox Firebug Add-on</li><li>Examine Element in Chrome Using Selenium IDE</li></ul>
+
+      <h3 id="how-many-ways-can-you-find-xpath-in-selenium"><span id="How_many_ways_can_you_find_XPath_in_Selenium">How many ways can you find XPath in Selenium?</span></h3>
+
+      <p>As previously said, there are several ways to locate XPath in Selenium.</p>
+
+      <p>The precise number of ways depends on the individual’s preferences and expertise with various tools and procedures.</p>
+
+      <h3 id="which-of-the-following-are-valid-methods-used-in-xpath"><span id="Which_of_the_following_are_valid_methods_used_in_XPath">Which of the following are valid methods used in XPath?</span></h3>
+
+      <p>Text(), contains(), starts-with(), and XPath supports many other methods.</p>
+
+      <p>Testers can use these methods to locate items based on various criteria such as text, attribute values, etc.</p>
+
+      <h3 id="why-do-we-use-xpath-in-selenium"><span id="Why_do_we_use_XPath_in_Selenium">Why do we use XPath in Selenium?</span></h3>
+
+      <p>With Selenium, XPath is a powerful tool for locating components on a web page.</p>
+
+      <p>It offers a versatile and dependable method for locating items based on various properties and criteria, making it excellent for web automation and testing.</p>
+
+      <h3 id="which-is-the-fastest-xpath"><span id="Which_is_the_fastest_XPath">Which is the fastest XPath?</span></h3>
+
+      <p>XPath performance may vary depending on the scenario and implementation.</p>
+
+      <p>Yet, relative XPath expressions are faster than absolute XPath expressions since they do not rely on the entire document hierarchy.</p>
+
+      <p>It is advised to employ relative XPath expressions whenever possible to increase efficiency.</p>
+
+      </div>
+
+  </body>
+</html>
