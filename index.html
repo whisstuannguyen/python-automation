@@ -10,6 +10,7 @@
     <title>Automation test with Python</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="Data/gif/galaxy.gif">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/effect.css">
     <link rel="stylesheet" href="css/main.css">
@@ -31,7 +32,7 @@
                     <li>-> Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks.</li>
                   </ul>
               <p>
-                Some links to learn Python:</a>
+                Some links to learn Python:
               </p>
               <ul class="pinner">
                 <li> <a href="https://www.w3schools.com/python/default.asp" class="openLink">w3schools</a>: Python tutorial</li>
@@ -102,14 +103,16 @@
             <h3 class="unit"><u>V. Extract WebElement attributes.</u></h3>
                 <p>Web page components such as text boxes, checkboxes, buttons, drop-downs, radio buttons, web forms, etc. are called web elements. These can be identified by attributes like id, classname, name, or XPath.</p>
                 <br>
-                <p>To run automation test, we need to locate general locators or XPath.</p>
+                <p>To run automation test, we need to locate general locators of web elements or XPath.</p>
                 <br>
                 <p class="specialmark">1. Locators in Selenium.</p>
                 <div style="margin-left: 2%;">
-                  <p>Open the Devtool by press F12, use inspect tool to locate the web components which you want to work on it.</p>
+                  <p>Open the Devtool by pressing F12, use inspect tool to locate the web components which you want to work on it.</p>
                   <br>
                   <p>You can see all attributes of web elements like id, classname, name, etc..</p>
-                  <img src="https://www.guru99.com/images/locator1.png" alt="locator example">
+                  <div class="value-img">
+                  <img src="https://www.guru99.com/images/locator1.png" data-action="zoom" data-original="https://www.guru99.com/images/locator1.png" alt="locator example">
+                  </div>
                   <p>Following this link to learn more: <a class="openLink" href="https://selenium-python.readthedocs.io/locating-elements.html">Locators in Selenium</a></p>
                 </div>
                 <br>
@@ -117,22 +120,33 @@
                 <div style="margin-left: 2%;">
                   <p>In Selenium automation, if the elements are not found by the general locators like id, class, name, etc. then XPath is used to find an element on the web page.</p>
                   <br>
-                  <p>You can easy to get a XPath by using inspect tool, then right click to the web components and choose Copy -> Copy Xpath.</p>
+                  <p>Component of xpath:</p>
+                  <div class="value-img">
+                    <img src="Data/img/01.png" data-action="zoom" data-original="Data/img/01.png" alt="Component of xpath">
+                  </div>
+                  <div class="value-img">
+                    <img src="Data/img/02.png" data-action="zoom" data-original="Data/img/02.png" alt="Component of xpath">
+                  </div>
+                  <br>
+                  <p>You can easy to get a XPath by using inspect tool, then right click to the web components and select Copy -> Copy Xpath.</p>
                   <div class="value-img">
                     <img src="Data/gif/copyxpath.gif" data-action="zoom" data-original="Data/gif/copyxpath.gif" alt="journey_start_thumbnail" />
                   </div>
                   <br>
-                  <p>Sometime, attributes of the components can be changed position, so tip above may not stable.</p>
+                  <p>Sometime, attributes of a component can be changed position, or in some cases the unique Xpath location cannot be obtained, so tip above may not stable.</p>
                   <p>Following this link to learn more: <a class="openLink" href="https://selenium-python.readthedocs.io/locating-elements.html#locating-by-xpath">XPath in Selenium</a></p>
                   <p><i>Example:</i></p>
                   <div class="value-img">
                     <img src="Data/gif/example3.gif" data-action="zoom" data-original="Data/gif/example3.gif" alt="journey_start_thumbnail" />
                   </div>
                   <p>Following the example above, we got a xpath:</p>
-                  <p><code style="color: khaki; margin-left: 2%;">//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[2]/div/div[2]/div</code></p>
-                  <p>In this xpath, maybe it contains no id, or many div tags, and position symbols [0], [1],... If in the future, the value we really want to get is swapped with a new value. The value is different, that will lead to an incorrect result.</p>
+                  <p><code style="color: khaki; margin-left: 2%;">//*[@id="<font color="33D4FF">app</font>"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[2]/div/div[2]/div</code></p>
+                  <p>In this xpath, maybe it contains no id, or many div tags, and position symbols [0], [1],... If in the future, the value we really want to get is swapped with a new value, or other position. The value is different, that will be cause an incorrect result.</p>
                   <p>We can change to:</p>
-                  <p><code style="color: khaki; margin-left: 2%;">//*[@class="oxd-table-cell oxd-padding-cell"]/div[contains(text(),'admin_cc')]</code></p>
+                  <p><code style="color: khaki; margin-left: 2%;">//*[@class="<font color="33D4FF">oxd-table-cell oxd-padding-cell</font>"]/div[contains(text(),'<font color="33D4FF">admin_cc</font>')]</code></p>
+                  <p>Assuming the target element does not have an ID attribute, we will use another attribute (class), and another special attribute that can be unique (contain text: "admin_cc").</p>
+                  <br>
+                  <p>ngoài ra</p>
                   <br>
                   <p>To check a Xpath, using CTRL+F in Devtool or support extentions. If there is only one result, the xpath can be used.</p>
                   <div class="value-img">
@@ -152,7 +166,7 @@
         </div> 
         <div class="content">
             <h3 class="unit"><u>VI. Create test script.</u></h3>
-            <p>Automation script created base on testcase, or checklist.</p>
+            <p>Automation script created base on testcase (or checklist).</p>
             <br>
             <p><i>Sample positive scenarios: </i>Verify if a user will be able to login with a valid username and valid password.</p>
             <table>
@@ -172,7 +186,7 @@
                 <td><label for="myTextArea" class="myLabel">3. Type valid password to the password textbox</label></td>
                 <td>Verify that able to type password</td>
               <tr>
-                <td><label for="myTextArea" class="myLabel">4. Click on Login buttom</label></td>
+                <td><label for="myTextArea" class="myLabel">4. Click on Login button</label></td>
                 <td><label for="myTextArea" class="myLabel">Verify that able to click and automatically navigate to next site</label></td>
               </tr>
             </table>
@@ -183,7 +197,7 @@ from selenium.webdriver.common.by import By #import By to extract attributes
 # initialize browser variable
 driver = webdriver.Edge()
             </textarea>
-            <button onclick="copyToClipboard('myTextArea')">copy</button>
+            <button id="btn-copy" class="btn-copy" onclick="copyToClipboard('myTextArea')">copy</button>
         </div>
         <br>
         <div class="content">
@@ -221,11 +235,14 @@ txt_username = driver.find_element(By.ID, "user-name")
 txt_password = driver.find_element(By.XPATH, "//*[@id='password']")
 btn_login = driver.find_element(By.ID, "login-button")
           </textarea>
+          <button id="btn-copy1" class="btn-copy" onclick="copyToClipboard('myTextArea1')">copy</button>
           <br>
           <p><i>Also, instead of using "assert", we can use "if... else..." block to be able to handle errors, and "raise" to throw the expected exceptions.</i></p>
           <pre>
             <code>
 if <i style="color: rgb(254, 167, 45);">expression</i>:
+  <i style="color: rgb(254, 167, 45);">[code block]</i>
+else:
   raise <i style="color: rgb(254, 167, 45);">Exception("error...")</i></code>
           </pre>
           <p>For more, follow this link: <a class="openLink" href="https://www.w3schools.com/python/ref_keyword_raise.asp">keyword raise</a></p>
@@ -249,16 +266,16 @@ if <i style="color: rgb(254, 167, 45);">expression</i>:
             <p>In Python a function is defined using the def keyword:</p>
             <pre>
               <code>
-  def my_function():
-      print("Hello from a function")</code>
+  def <i style="color: rgb(254, 167, 45);">my_function()</i>:
+      print("<i style="color: rgb(254, 167, 45);">Hello from a function</i>")</code>
             </pre>
             <p>To call a function, use the function name followed by parenthesis:</p>
             <pre>
               <code>
-  def my_function():
-      print("Hello from a function")
+  def <i style="color: rgb(254, 167, 45);">my_function()</i>:
+      print("<i style="color: rgb(254, 167, 45);">Hello from a function</i>")
 
-  <b>my_function()</b></code>
+  <b style="color: rgb(232, 135, 0);">my_function()</b></code>
             </pre>
             <br>
             <p>For more, follow this link: <a class="openLink" href="https://www.w3schools.com/python/python_functions.asp">python functions</a></p>
@@ -266,8 +283,8 @@ if <i style="color: rgb(254, 167, 45);">expression</i>:
           </div>
           <p class="specialmark">2. Exception Handling.</p>
           <div style="margin-left: 2%;">
-            <p>When an error occurs, or exception as we call it, Python will normally stop and generate an error message.</p>
-            <p>These exceptions can be handled using the try statement:</p>
+            <p>When an error occurs, or exception as we call it, Python will normally stop and generate error messages.</p>
+            <p>These exceptions can be handled using the try:... except:... statement:</p>
             <pre>
               <code>
   def my_function():
@@ -307,6 +324,7 @@ if <i style="color: rgb(254, 167, 45);">expression</i>:
           <p>There are many ways to export reports such as writing csv, excel, html files,... In this tutorial, we will guide you on how to process on excel files.</p>
           <p>First, install <i>openpyxl</i> library.</p>
           <br>
+
           <br>
           <ol class="pinner" type="1">
             <li><label id="visiblelabel2" for="myTextArea2" class="myLabel2">Import library.</label></li>
@@ -318,6 +336,7 @@ if <i style="color: rgb(254, 167, 45);">expression</i>:
           </ol>
           <textarea name="scriptgenerate" id="myTextArea2" cols="20" rows="25" readonly>
           </textarea>
+          <button id="btn-copy2" class="btn-copy" onclick="copyToClipboard('myTextArea2')">copy</button>
         </div>
         <div class="content">Box 9</div>
         <div class="content">Box 10</div>

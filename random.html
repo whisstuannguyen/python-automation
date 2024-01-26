@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Data</title>
+</head>
+<body>
+    <h1 id="randomHeading">Dữ liệu ngẫu nhiên sẽ xuất hiện ở đây</h1>
+
+    <script>
+        // Mảng chứa các dữ liệu ngẫu nhiên
+        var randomData = [
+            "<span>There</span><span>are</span>",
+            "Xin chào thế giới!",
+            "Hãy làm điều gì đó tuyệt vời!",
+            "JavaScript là mạnh mẽ!",
+            "Cảm ơn bạn đã ghé thăm!"
+        ];
+
+        // Chọn một phần tử ngẫu nhiên từ mảng
+        var randomIndex = Math.floor(Math.random() * randomData.length);
+
+        // Đổ dữ liệu vào thẻ h1
+        document.getElementById("randomHeading").innerHTML = randomData[randomIndex];
+    </script>
+</body>
+</html>

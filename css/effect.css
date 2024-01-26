@@ -25,7 +25,7 @@
   font-family: 'Fredoka One', cursive;
 }
 /* arrow */
-.button::before{
+/* .button::before{
   content : '' ;
   position : absolute ;
   z-index : 2 ;
@@ -37,7 +37,7 @@
   height : 24px ;
   background : var(--base_color) ; 
   transition : all ease .2s ;
-}
+} */
 .button__wrapper{
   display : flex ;
   justify-content : center ;
@@ -53,6 +53,7 @@
 .button__wrapper::after{
   transition : all .5s ease ;
 }
+/* char on top */
 .characterBox{ 
   position : absolute ;
   top : -54px ;
@@ -65,6 +66,7 @@
   width : 125px ;
   height : 56px ;
 }
+/* button text */
 .button__text{
   position : relative ;
   z-index : 3 ;
@@ -72,7 +74,7 @@
   letter-spacing : 2px ;
   color : var(--base_color) ;
   transition : all .3s ease ;
-  margin-right: 10%;
+  margin-right: center; /* 3% */
 }
 .character{
   position : relative ;
