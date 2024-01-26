@@ -20,14 +20,6 @@ body {
     min-width:1000px;
   }
 
-  html, body {
-    /* height: 100%; */
-    margin: 0;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-}
-
 .unit {
 border-left: 5px solid;
 margin-left: 0;
