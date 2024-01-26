@@ -1,0 +1,128 @@
+:root {
+    --color-primary: hsl(310, 100%, 65%);
+    --color-secondary: hsl(160, 100%, 65%);
+    --background: hsl(230, 30%, 15%);
+    --text: hsl(310, 100%, 95%);
+  }
+
+body {
+    display: grid;
+    place-content: center;
+    gap: 4vh;
+    min-height: 100vh;
+    width: min(120ch, 100vw - 2rem);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: var(--background);
+    color: var(--text);
+    min-width:1000px;
+  }
+
+.unit {
+border-left: 5px solid;
+margin-left: 0;
+padding: 1rem 0 1rem 2rem;
+font-size: 2rem;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: linear-gradient(
+    35deg,
+    var(--color-primary),
+    var(--color-secondary)
+    )
+}
+
+.pinner{
+    margin-top:0in;
+    margin-right:0in;
+    margin-bottom:8.0pt;
+    margin-left:12.5%;
+    line-height:107%;
+    font-size:20px;
+    font-family:"Calibri",sans-serif;
+  }
+  
+  .pinner li{
+    margin: 5px;
+    margin-right: 3%;
+  }
+  
+  .unit{
+    margin-top:5px;
+    margin-right:0in;
+    margin-bottom:8.0pt;
+    margin-left:5%;
+    line-height:107%;
+    font-family:"Arial",sans-serif;
+}
+/*
+li:hover{
+    background-color: aliceblue;
+    color: black
+}
+*/
+a{
+    color: aquamarine;
+}
+
+img, video {
+    max-width: 30%;
+    height: auto;
+    padding-left: 10%;
+    margin: 5px;
+    margin-left: 10%;
+}
+
+p{
+    margin-left: 10%;
+    font-size:20px;
+    font-family:"Arial",sans-serif;
+}
+
+.specialmark{
+  font-style: italic;
+  text-decoration: underline;
+}
+
+table{
+  font-family:"Calibri",sans-serif;
+  width: fit-content;
+  height: fit-content;
+  font-size:20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td{
+  padding: 5px;
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+textarea{
+  font-family:"Courier",sans-serif;
+  display: block;
+  font-size:15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: left;
+  display: none;
+}
+
+pre{
+  display: block;
+  font-size:15px;
+  margin-left: 10%;
+  width: 50%;
+  background-color: dimgrey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-copy{
+  margin-left: 48%;
+  display: none;
+}
